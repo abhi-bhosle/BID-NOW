@@ -1,0 +1,90 @@
+/* src/components/Registration/Registration.css */
+
+/* Container for the registration banner (logo and title) */
+.register-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Styling for the logo image */
+.register-banner img {
+  width: 150px;  /* Adjust the logo size */
+  height: auto;
+  margin-bottom: 20px; /* Space between the logo and the title */
+  object-fit: contain; /* Ensure the logo maintains its aspect ratio */
+}
+
+/* Title text beneath the logo */
+.register-banner h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333; /* Dark text color for the title */
+  margin-top: 0;
+}
+
+/* General form container styles */
+.form-container {
+ 
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.form-container button {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  background-color: #F5A623; /* Blue color */
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+}
+
+.form-container button:hover {
+  background-color: #e5941e;
+}
+
+/* Error message styles */
+.error {
+  color: red;
+  font-size: 14px;
+  text-align: center;
+}
+/* Ensure the parent container centers its content */
+.registration-page {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Full viewport height */
+  background: linear-gradient(to right, #6a11cb, #9b5de5, #f5a623); /* Optional: Set a background color */
+  padding: 20px; /* Optional: Prevent content from touching screen edges */
+}
+
+/* Keep existing styles for .form-container */
+.form-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,184 @@
+/* General Styles */
+.home-page {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, rgba(106, 17, 203, 0.1), rgba(37, 117, 252, 0.1));
+    color: #0c0c0c;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Hero Section with Diagonal Line Animation */
+.hero-section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    background: linear-gradient(to right, #6a11cb, #9b5de5, #f5a623);
+    text-align: center;
+    padding: 20px;
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+}
+
+/* Adding the animated gradient effect */
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.2) 75%);
+    background-size: 200% 200%;
+    animation: diagonalAnimation 4s ease-in-out infinite;
+    z-index: -1;
+}
+
+/* Keyframe Animation for the Diagonal Line Effect */
+@keyframes diagonalAnimation {
+    0% {
+        background-position: 200% 0%;
+    }
+    50% {
+        background-position: 0% 100%;
+    }
+    100% {
+        background-position: 200% 0%;
+    }
+}
+
+/* Hero Content (Text and Buttons) */
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+.hero-buttons .btn {
+    padding: 18px 34px;
+    margin: 10px;
+    font-size: 1rem;
+    border-radius: 25px;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.primary-btn {
+    background-color: #2575fc;
+    color: white;
+}
+
+.secondary-btn {
+    background-color: #f5a623;
+    color: white;
+}
+
+.primary-btn:hover {
+    background-color: #1a5fc4;
+    transform: scale(1.05);
+}
+
+.secondary-btn:hover {
+    background-color: #d57e16;
+    transform: scale(1.05);
+}
+
+/* Info Section Styling */
+.info-section {
+    background: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 40px;
+    border-radius: 20px; /* Curved edges */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2); /* Floating effect */
+    width: 95%; /* Set width to 95% */
+    margin-left: auto;
+    margin-right: auto; /* Center the section */
+}
+
+/* Info Section Heading */
+.info-section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 50px;
+}
+
+/* Info Cards */
+.info-content {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    flex-wrap: wrap;
+}
+
+.info-card {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.info-card h3 {
+    font-size: 1.2rem;
+    color: #2575fc;
+    margin-bottom: 10px;
+}
+
+.info-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: rgba(37, 117, 252, 0.1);
+    text-align: center;
+    color: #333;
+    padding: 20px;
+    font-size: 1rem;
+    border-top: 1px solid #ddd;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: auto;
+}
+
+/* Keyframe Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Styling for images in info-card */
+.info-card-image {
+    width: 100%;
+    max-width: 250px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Curved edges */
+    margin: 15px 0; /* Space around the image */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+    display: block; /* Center the image inside the card */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  

@@ -1,0 +1,266 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.admin-dashboard {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+.dashboard-header1 {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-header1 h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+/* Analytics Section */
+.analytics-section {
+  padding: 20px;
+  background-color: white;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.analytics-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #2575fc;
+}
+
+.analytics-graphs {
+  display: flex;
+  gap: 20px;
+}
+
+.graph {
+  flex: 1;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Review Section */
+.review-section {
+  padding: 20px;
+  background-color: white;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.review-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #2575fc;
+}
+
+.auction-table {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+.auction-table tr {
+  color: #000;
+}
+
+.auction-table table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.auction-table td {
+  padding: 1px;
+  border: 1px solid #ddd;
+}
+.auction-table th {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.auction-table th {
+  background-color: #f5f5f5;
+  color: #2575fc;
+  font-weight: bold;
+}
+
+.approve-btn,
+.reject-btn {
+  padding: 6px 8px;
+  width: 100px; /* Reduced padding for smaller button size */
+  font-size: 0.8rem; /* Smaller font size */
+  border: none;
+  border-radius: 4px; /* Slightly smaller border-radius for compact look */
+  cursor: pointer;
+}
+
+.approve-btn {
+  background-color: #82ca9d;
+  color: white;
+}
+
+.reject-btn {
+  background-color: #f54242;
+  color: white;
+}
+
+.approve-btn:hover {
+  background-color: #5da87a;
+}
+
+.reject-btn:hover {
+  background-color: #d12e2e;
+}
+
+/* Management Section */
+.management-section {
+  padding: 20px;
+  background-color: white;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.management-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #2575fc;
+}
+/* Management Section Styles */
+.management-boxes {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.approved-box,
+.rejected-box {
+  flex: 1;
+  padding: 15px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.approved-box h3,
+.rejected-box h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #9a54c0; /* A contrasting color for section titles */
+  margin-bottom: 40px;
+}
+
+.approved-box ul,
+.rejected-box ul {
+  list-style-type: none; /* Remove bullets */
+  padding: 0;
+  margin: 0;
+}
+
+.approved-box li,
+.rejected-box li {
+  color: #333; /* Set text color to black or dark gray */
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+.approved-box ul li,
+.rejected-box ul li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.approved-box ul li img,
+.rejected-box ul li img {
+  width: 150px;
+  height:150px;
+  border-radius: 4px;
+}
+
+.approved-box ul li p,
+.rejected-box ul li p {
+  margin: 0;
+  color: #333; /* Dark color for text */
+  font-size: 1rem;
+}
+/* Footer Styles */
+.dashboard-footer {
+  background: linear-gradient(to right, rgba(37, 117, 252, 0.3), rgba(106, 17, 203, 0.3));
+  color: #ffffff;
+  padding: 20px 40px;
+  margin-top: 20px;
+  backdrop-filter: blur(5px); /* Adds a slight blur to enhance faintness */
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border for separation */
+}
+
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+  margin: 10px;
+}
+
+.footer-section h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #9013cf;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+  color:#fbfcfe;
+}
+
+.footer-section ul li:hover {
+  color: #f5a623;
+  cursor: pointer;
+}
+
+.footer-section p {
+  margin: 5px 0;
+  line-height: 1.6;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #2f2e2e;
+}
+
+.footer-section .social-media p {
+  font-size: 1.1rem;
+  font-weight: bold;
+}

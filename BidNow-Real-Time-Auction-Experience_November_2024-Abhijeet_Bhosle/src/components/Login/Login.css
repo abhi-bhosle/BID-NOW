@@ -1,0 +1,88 @@
+/* Ensure the parent container centers its content */
+.login-page {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Full viewport height */
+  background: linear-gradient(to right, #6a11cb, #9b5de5, #f5a623); /* Optional: Set a dark background for the login page */
+  padding: 20px; /* Optional: Prevent content from touching screen edges */
+}
+
+/* Keep existing styles for .form-container */
+.form-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+label{
+  position: relative;
+  bottom: 10px;
+  color: #333;
+}
+
+h2 {
+  font-size: 28px;
+  color: #F5A623;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+input:focus {
+  border-color: #F5A623;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin: 20px 0;
+  background-color: #F5A623;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #D57E16;
+}
+
+.link {
+  color: #F5A623;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Styling for the "Login as" dropdown */
+.role-selection {
+  margin: 15px 0;
+}
+
+.role-selection select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  color: #333;
+}
+
+.role-selection select:focus {
+  border-color: #F5A623;
+}

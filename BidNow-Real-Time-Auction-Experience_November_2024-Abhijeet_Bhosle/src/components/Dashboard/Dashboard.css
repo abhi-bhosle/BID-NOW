@@ -1,0 +1,284 @@
+/* src/components/Dashboard/Dashboard.css */
+
+/* Apply the background gradient to the body to ensure it covers the entire page */
+.dashboard-container {
+  background: rgba(238, 240, 255, 0.5); /* Faint purple with transparency */
+  padding: 20px;
+  min-height: calc(100vh - 60px); /* Adjust height to avoid overlap with navbar */
+  box-sizing: border-box;
+  margin: 0 auto; /* Center dashboard content */
+  width: 100%; /* Full width to remove purple on sides */
+  background: linear-gradient(to right, rgba(106, 17, 203, 0.2), rgba(37, 117, 252, 0.2)); /* Faint purple-blue gradient */
+}
+
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.dashboard-header h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.dashboard-header p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.dashboard-content {
+  display: flex;
+  flex-wrap: wrap; /* Ensure responsiveness and allow wrapping */
+  justify-content: space-between;
+  gap: 20px;
+}
+
+
+.upcoming-auctions,
+.active-auctions {
+  flex: 1 100%; /* Ensure it takes full width */
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.active-auctions h2,
+.upcoming-auctions h2,
+.recent-auctions h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Recent Auctions specific grid */
+.recent-auction-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 images in a row for Recent Auctions */
+  gap: 20px;
+}
+
+/* Upcoming and Active Auctions specific grid */
+.upcoming-auction-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 images in a row */
+  gap: 20px;
+}
+
+.auction-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px; /* Rounded corners for the item container */
+  box-sizing: border-box; /* Ensures padding does not affect width */
+  overflow: hidden; /* Ensures the image respects rounded corners */
+}
+
+.auction-item img {
+  width: 100%; /* Make image fill the entire width of the container */
+  height: 200px; /* Set a fixed height, adjust as needed */
+  object-fit: cover; /* Ensure the image covers the area, maintains aspect ratio */
+  border-radius: 8px; /* Rounded corners for the image */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.auction-item img:hover {
+  transform: translateY(-10px); /* Move the image upwards by 10px */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for a "lifted" effect */
+}
+.recent-auctions
+ {
+  flex: 0 0 calc(50% - 20px); /* Ensure these boxes maintain their width */
+  max-width: calc(50% - 20px);
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ 
+}
+.my-activity {
+  flex: 0 0 calc(50% - 20px); /* Maintain width */
+  max-width: calc(50% - 20px);
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden; 
+  /* height: 400px;  */
+}
+
+.my-activity h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.my-activity ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  
+}
+
+.my-activity ul li {
+  background-color: rgba(238, 240, 255, 0.7); /* Faint purple with transparency */
+  padding: 10px;
+  margin: 19px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #333; /* Dark text color */
+  width: calc(100% - 20px); /* Ensure the list items take the full width with padding */
+  margin-left: auto;
+  margin-right: auto; /* Center the list items horizontally */
+  box-sizing: border-box;
+}
+
+
+
+.my-activity p {
+  color: #333; /* Faint purple to match dashboard theme */
+  font-style: aerial; /* Optional: Makes it stand out */
+}
+
+/* Change the color of the auction item names */
+.auction-item b p {
+  color: #333; /* Set to your desired color (dark gray, for example) */
+  font-size: 1.2rem; /* Adjust the font size if needed */
+  font-weight: bold; /* Make the name bold */
+  margin-top: 10px; /* Space above the name */
+}
+
+/* Optionally, you can change the color of the text separately */
+.auction-item p {
+  color: #666; /* Lighter color for description or bid amount */
+  font-size: 1rem; /* Adjust the font size if needed */
+  margin-top: 10px; /* Add some spacing above the text */
+}
+
+/* Ensure the footer stays at the bottom */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
+  box-sizing: border-box; /* Ensures padding and borders are included in the height */
+}
+
+.dashboard-content {
+  flex: 1; /* Allows content to expand and push the footer down */
+}
+
+.dashboard-footer {
+  background-color: rgba(37, 117, 252, 0.1); /* Light blue background with slight transparency */
+  color: #333; /* Dark text color for readability */
+  text-align: center; /* Center-align text */
+  padding: 20px; /* Add some space around the content */
+  font-size: 1rem; /* Adjust font size for a balanced appearance */
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow at the top of the footer */
+  border-top: 1px solid #ddd; /* Add a top border for separation */
+  margin-top: auto; /* Push the footer to the bottom */
+}
+
+/* Add styles for the buttons */
+.dashboard-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Space between the buttons */
+}
+
+.dashboard-buttons button {
+  height: 50px;
+  width: 300px; /* Fixed narrower width */
+  padding: 8px; /* Adjusted padding for balance */
+  font-size: 14px; /* Slightly smaller font size */
+  background: linear-gradient(90deg, #6A11CB, #2575FC);
+  color: white;
+  border: none;
+  border-radius: 4px; /* Slightly smaller border radius */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center; /* Ensures the text aligns properly */
+}
+
+.dashboard-buttons button:hover {
+  background: linear-gradient(90deg, #4C0E92, #1B4CA8);
+}
+.countdown-timer {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #e63946; /* Highlight the timer in red */
+  margin-top: 10px;
+}
+.dashboard-footer {
+  background-color: rgba(37, 117, 252, 0.1); /* Light blue background with slight transparency */
+  color: #333; /* Dark text color for readability */
+  text-align: center;
+  padding: 30px 20px; /* Increased padding for a balanced appearance */
+  font-size: 1rem; /* Base font size for the footer */
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow at the top */
+  border-top: 1px solid #ddd; /* Separator line at the top of the footer */
+  margin-top: auto; /* Push the footer to the bottom */
+}
+
+/* Footer row to hold Contact Us and Email sections */
+.footer-row {
+  display: flex;
+  justify-content: center; /* Center the sections */
+  gap: 40px; /* Space between the two sections */
+  align-items: flex-start; /* Align sections to the top */
+  margin-bottom: 20px; /* Space between the row and the footer bottom text */
+}
+
+/* Individual sections */
+.footer-section {
+  flex: 0 0 45%; /* Limit each section's width */
+}
+
+.contact-section {
+  text-align: center; /* Align text to the left */
+}
+
+.email-section {
+  text-align: center; /* Align text to the right */
+}
+
+/* Section headers (Contact Us, Email) */
+.footer-section h3 {
+  font-size: 1.2rem; /* Slightly larger for headers */
+  font-weight: bold;
+  margin-bottom: 10px; /* Space below the header */
+  color: #2575FC; /* Blue color for headers */
+}
+
+/* Text under each header */
+.footer-section p {
+  margin: 8px 0; /* Space between lines */
+  font-size: 0.95rem; /* Slightly smaller for detailed text */
+  line-height: 1.5; /* Better readability */
+}
+
+/* Footer bottom text (e.g., copyright) */
+.footer-bottom {
+  font-size: 0.85rem; /* Smaller size for secondary text */
+  color: #666; /* Lighter color for subtle appearance */
+  margin-top: 20px; /* Space above the bottom text */
+}
+
+.dashboard-header {
+  text-align: center;
+  padding: 50px;
+  background-color: rgba(255, 255, 255, 0.7); /* Transparent background */
+  z-index: 1;
+  border-radius: 8px;
+  position: relative;
+}
+
+
+.dashboard-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+

@@ -1,0 +1,46 @@
+.manage-auctions {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.manage-auctions h2 {
+  text-align: center;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.auction-list1 {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.auction-item1 {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.auction-item button {
+  margin-left: auto;
+  padding: 5px 10px;
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.auction-item button:hover {
+  background-color: #c9302c;
+} 
